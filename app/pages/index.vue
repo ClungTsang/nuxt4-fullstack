@@ -32,15 +32,22 @@
     <!-- 数据展示 -->
     <div v-else class="grid grid-cols-1 md:grid-cols-3 gap-6">
       <UCard
-        v-for="item in banners"
+        v-for="(item, index) in banners"
         :key="item.id"
         class="hover:shadow-lg transition-shadow duration-300"
       >
         <div class="aspect-video w-full overflow-hidden">
+          <!-- 
+            LCP 优化：
+            1. 首图添加 fetchpriority="high" 提升优先级
+            2. 首图 eager loading，其他 lazy loading
+          -->
           <img
             :src="item.image"
             :alt="item.title"
             class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+            :fetchpriority="index === 0 ? 'high' : 'auto'"
+            :loading="index === 0 ? 'eager' : 'lazy'"
           />
         </div>
         <div class="p-4">
@@ -80,4 +87,12 @@ import { useHomeLogic } from "./hook";
 
 // 引入业务逻辑
 const { banners, pending, error } = useHomeLogic();
+
+// 页面级 SEO 配置
+useHead({
+  title: '首页',
+  meta: [
+    { name: 'description', content: 'Nuxt 4 模板首页，展示 SSR 数据获取与性能优化示例。' }
+  ]
+})
 </script>

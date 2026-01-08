@@ -2,7 +2,6 @@
   <UApp :toaster="{ position: 'top-center', duration: 3000 }">
     <UMain>
       <Analytics />
-      <SpeedInsights />
       <NuxtPage />
     </UMain>
   </UApp>
@@ -10,7 +9,6 @@
 
 <script setup lang="ts">
 import { Analytics } from "@vercel/analytics/nuxt";
-import { SpeedInsights } from "@vercel/speed-insights/nuxt";
 /**
  * 全局应用配置
  * 设置全局 SEO 信息和 HTML 属性

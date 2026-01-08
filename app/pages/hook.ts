@@ -1,9 +1,3 @@
-/*
- * @Author: HIsheR shawn1440982358@163.com
- * @Date: 2026-01-08 13:09:08
- * @LastEditTime: 2026-01-08 14:09:21
- * @Description: 首页逻辑 Hook，负责 SSR 场景下的 Banner 数据获取与状态管理
- */
 /**
  * 首页逻辑 Hook
  *

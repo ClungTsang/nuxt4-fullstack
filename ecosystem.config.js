@@ -2,7 +2,7 @@
 module.exports = {
   apps: [
     {
-      name: "request",
+      name: "nuxt4-fullstack-template",
       script: "./server/index.mjs",
       instances: 1,
       exec_mode: "fork",

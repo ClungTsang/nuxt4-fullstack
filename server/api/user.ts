@@ -1,9 +1,3 @@
-/*
- * @Author: HIsheR shawn1440982358@163.com
- * @Date: 2026-01-08 13:15:21
- * @LastEditTime: 2026-01-08 13:15:24
- * @Description: 
- */
 /**
  * 用户基础数据模拟接口
  *
@@ -19,11 +13,10 @@ export default defineEventHandler((event) => {
     message: "success",
     data: {
       id: 1001,
-      username: "TraeDeveloper",
+      username: "HIsheR",
       nickname: "全栈开发者",
-      avatar:
-        "https://ui-avatars.com/api/?name=Trae+Developer&background=random",
-      email: "developer@trae.ai",
+      avatar: "https://ui-avatars.com/api/?name=HR&background=random",
+      email: "shawn1440982358@gmail.com",
       role: "admin",
       balance: 9999.99,
     },

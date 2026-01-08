@@ -1,9 +1,3 @@
-<!--
- * @Author: HIsheR shawn1440982358@163.com
- * @Date: 2026-01-08 13:08:44
- * @LastEditTime: 2026-01-08 13:53:21
- * @Description: 
--->
 <template>
   <UContainer class="py-8">
     <h1 class="text-2xl font-bold mb-6 text-gray-900 dark:text-white">
@@ -90,9 +84,12 @@ const { banners, pending, error } = useHomeLogic();
 
 // 页面级 SEO 配置
 useHead({
-  title: '首页',
+  title: "首页",
   meta: [
-    { name: 'description', content: 'Nuxt 4 模板首页，展示 SSR 数据获取与性能优化示例。' }
-  ]
-})
+    {
+      name: "description",
+      content: "Nuxt 4 模板首页，展示 SSR 数据获取与性能优化示例。",
+    },
+  ],
+});
 </script>
